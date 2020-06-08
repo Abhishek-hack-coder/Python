@@ -1,0 +1,23 @@
+import random
+def game():
+    num = random.randrange(1,100)
+    guess=int(input(" enter the number"))
+    while guess!=num:
+        if guess<num:
+            print("go higher for the random number. try again")
+            guess=int(input(" enter the number"))
+        elif guess>num:
+            print(" go lower for the random number. try again")
+            guess=(int(input(" enter the number")))
+        else:
+            print(" please enter valid number. try again")
+    while guess==num:
+        print("congratuation you got the real value of random number")
+        break
+c="yes"
+def main():
+    global c
+    while c=="yes":
+        game()
+        c=input("Wanna play more(yes/no):")
+main()
